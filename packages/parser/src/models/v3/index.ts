@@ -12,6 +12,7 @@ export { Extension as ExtensionV3 } from './extension';
 export { Extensions as ExtensionsV3 } from './extensions';
 export { ExternalDocumentation as ExternalDocumentationV3 } from './external-docs';
 export { Info as InfoV3 } from './info';
+export { Company as CompanyV3 } from './company';
 export { License as LicenseV3 } from './license';
 export { MessageExample as MessageExampleV3 } from './message-example';
 export { MessageExamples as MessageExamplesV3 } from './message-examples';

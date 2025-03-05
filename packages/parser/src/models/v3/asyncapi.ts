@@ -1,5 +1,6 @@
 import { BaseModel } from '../base';
 import { Info } from './info';
+import { Company } from './company';
 import { Servers } from './servers';
 import { Server } from './server';
 import { Channels } from './channels';
@@ -18,6 +19,7 @@ import { schemasFromDocument } from '../utils';
 
 import type { AsyncAPIDocumentInterface } from '../asyncapi';
 import type { InfoInterface } from '../info';
+import type { CompanyInterface } from '../company';
 import type { ServersInterface } from '../servers';
 import type { ChannelsInterface } from '../channels';
 import type { OperationsInterface } from '../operations';
@@ -48,6 +50,10 @@ export class AsyncAPIDocument extends BaseModel<v3.AsyncAPIObject> implements As
 
   info(): InfoInterface {
     return this.createModel(Info, this._json.info, { pointer: '/info' });
+  }
+
+  company(): CompanyInterface {
+    return this.createModel(Company, this._json.company || {}, { pointer: '/company' });
   }
 
   servers(): ServersInterface {

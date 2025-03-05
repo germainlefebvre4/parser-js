@@ -79,6 +79,7 @@ function getSchemaValidator(version: string): ValidateFunction {
  * included in the returned JSON Schema.
  */
 function preparePayloadSchema(asyncapiSchema: JSONSchema7, version: string): JSONSchema7 {
+  // const payloadSchema = `https://storage.googleapis.com/cvwonder/definitions/${version}/schema.json`;
   const payloadSchema = `http://asyncapi.com/definitions/${version}/schema.json`;
   const definitions = asyncapiSchema.definitions;
   if (definitions === undefined) {

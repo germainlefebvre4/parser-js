@@ -8,6 +8,7 @@ export interface AsyncAPIObject extends SpecificationExtensions {
   asyncapi: AsyncAPIVersion;
   id?: Identifier;
   info: InfoObject;
+  company?: CompanyObject;
   defaultContentType?: DefaultContentType;
   servers?: ServersObject;
   channels: ChannelsObject;
@@ -23,6 +24,11 @@ export interface InfoObject extends SpecificationExtensions {
   termsOfService?: string;
   contact?: ContactObject;
   license?: LicenseObject;
+}
+
+export interface CompanyObject extends SpecificationExtensions {
+  name?: string;
+  logo?: string;
 }
 
 export interface ContactObject extends SpecificationExtensions {

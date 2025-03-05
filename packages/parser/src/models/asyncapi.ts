@@ -1,5 +1,6 @@
 import type { BaseModel } from './base';
 import type { InfoInterface } from './info';
+import type { CompanyInterface } from './company';
 import type { ChannelsInterface } from './channels';
 import type { ComponentsInterface } from './components';
 import type { MessagesInterface } from './messages';
@@ -19,6 +20,7 @@ export interface AsyncAPIDocumentInterface extends BaseModel<v2.AsyncAPIObject |
   defaultContentType(): string | undefined;
   hasDefaultContentType(): boolean;
   info(): InfoInterface;
+  company(): CompanyInterface;
   servers(): ServersInterface;
   channels(): ChannelsInterface;
   operations(): OperationsInterface;
