@@ -18,6 +18,7 @@ export * from './extension';
 export * from './extensions';
 export * from './external-docs';
 export * from './info';
+export * from './company';
 export * from './license';
 export * from './message-example';
 export * from './message-examples';
